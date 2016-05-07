@@ -64,42 +64,72 @@
     </div>
 
 	<!-- *****************************************************************************************************************
-	 HEADERWRAP
+	 BLUE WRAP
 	 ***************************************************************************************************************** -->
-	<div id="headerwrap">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h3>Others.</h3>
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /blue -->
 
-				<h1>RAJ TUTORIALS</h1>
-				
-				<div >
-					<h3>Others</h3>
-					<ul  id="recent_posts">
-						<li ><a target="_top" href="http://www.rajtuts.com/others/how_to_detect_a_phishing_mail.htm" title="How to detect a Phishing Mail?">How to detect a Phishing Mail?</a></li>
-					</ul>
-				</div>
-			</div>
-			
-			
-		</div><!-- /row -->
-	</div> <!-- /container -->
-</div><!-- /headerwrap -->
+	 
 	<!-- *****************************************************************************************************************
-	 OTHERS
+	 AGENCY ABOUT
 	 ***************************************************************************************************************** -->
 
+	 <div class="container mtb">
+	 	<div class="row">
+	 		
+	 		<div >
+		 		<h4>How to detect a Phishing Mail?</h4>
+				
+				
+				<ol>
+					<li>Basic Header Analysis – Check:
+						<ul>
+						  <li>If the <b style='font-weight:normal'>Display
+Name</b> is <b style='font-weight:normal'><u>Spoofed</u></b> – e.g. Anil Ganapati(Google) should have the SMTP name – <a href="mailto:anil.gang@mail.com">anil.gang@mail.com</a> and <b style='font-weight:normal'>NOT</b> <a href="mailto:ck.g@nicegal.com">ck.g@nicegal.com</a></li>
+						  <li>If the From (or Reply-To) address domain is somewhat reputable e.g. @gmail.com and not @g-m-a-i-l.com</li>
+						  <li>If the Subject line contains urgent or threatening language e.g. urgent: “Your loan installments have lapsed and your action is required”.</li>
+						  
+						</ul>
+					</li>
+					<li>Basic Message Content Analysis – Check:
+						<ul>
+						  <li>Spelling errors</li>
+						  <li>Should the body of the email contain links, do not click on the link? Instead, hover the mouse cursor over it. Confirm that the destination displayed matches the destination in the email and it is the organization’s legitimate website.</li>
+						  <li>Should the email contain attachments, DON’T OPEN ANY ATTACHMENTS!</li>
+						</ul>
+					</li>
+					
+					
+				</ol>
+				<p></p>
+				<h4>How to detect a Phishing Mail?</h4>
+				<p>When you are unsure if your computer is infected, after you click the link or opened the attachment, go through below step to verify:</p>
+				<ol>
+					<li>Go to VirusTotal website – https://www.virustotal.com/ a free service that analyzes suspicious files and URLs</li>
+					<li>To verify attachment -> Click on “File” tab and attach the suspected file -> Click on “Scan it!” button.</li>
+					<li>To verify link -> Click on “URL” tab, copy and paste the link to the textbox -> Click on “Scan it!” button.</li>
+					<li>The scan result will show if the file or link is malicious. If the result show as below, i.e., with a virus name then highly likely your computer is infected.</li>
+					<li>Immediately, disconnect your LAN cable and disable the Wi-Fi connection on your computer. Call your local service desk to raise a ticket on this incident and wait for further notification through phone.</li>
+				</ol>
+		 		
+	 		</div>
+	 	</div><! --/row -->
+	 </div><! --/container -->
+
+	
 	<!-- *****************************************************************************************************************
 	 FOOTER
 	 ***************************************************************************************************************** -->
 	 
-	 <div id="footerwrap" class="footer">
-	 	<div class="container">
-		 	<p>Copyright 2016 Raj Tutorials</p>
-	 	</div><! --/container -->
-	 </div><! --/footerwrap -->
-	 
-    <!-- Bootstrap core JavaScript
+	 <div id="footerwrap">
+	 <p>Copyright 2016 Raj Tutorials</p>
+	 	</div>
+	 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -112,87 +142,5 @@
   	<script src="assets/js/custom.js"></script>
 
 
-    <script>
-// Portfolio
-(function($) {
-	"use strict";
-	var $container = $('.portfolio'),
-		$items = $container.find('.portfolio-item'),
-		portfolioLayout = 'fitRows';
-		
-		if( $container.hasClass('portfolio-centered') ) {
-			portfolioLayout = 'masonry';
-		}
-				
-		$container.isotope({
-			filter: '*',
-			animationEngine: 'best-available',
-			layoutMode: portfolioLayout,
-			animationOptions: {
-			duration: 750,
-			easing: 'linear',
-			queue: false
-		},
-		masonry: {
-		}
-		}, refreshWaypoints());
-		
-		function refreshWaypoints() {
-			setTimeout(function() {
-			}, 1000);   
-		}
-				
-		$('nav.portfolio-filter ul a').on('click', function() {
-				var selector = $(this).attr('data-filter');
-				$container.isotope({ filter: selector }, refreshWaypoints());
-				$('nav.portfolio-filter ul a').removeClass('active');
-				$(this).addClass('active');
-				return false;
-		});
-		
-		function getColumnNumber() { 
-			var winWidth = $(window).width(), 
-			columnNumber = 1;
-		
-			if (winWidth > 1200) {
-				columnNumber = 5;
-			} else if (winWidth > 950) {
-				columnNumber = 4;
-			} else if (winWidth > 600) {
-				columnNumber = 3;
-			} else if (winWidth > 400) {
-				columnNumber = 2;
-			} else if (winWidth > 250) {
-				columnNumber = 1;
-			}
-				return columnNumber;
-			}       
-			
-			function setColumns() {
-				var winWidth = $(window).width(), 
-				columnNumber = getColumnNumber(), 
-				itemWidth = Math.floor(winWidth / columnNumber);
-				
-				$container.find('.portfolio-item').each(function() { 
-					$(this).css( { 
-					width : itemWidth + 'px' 
-				});
-			});
-		}
-		
-		function setPortfolio() { 
-			setColumns();
-			$container.isotope('reLayout');
-		}
-			
-		$container.imagesLoaded(function () { 
-			setPortfolio();
-		});
-		
-		$(window).on('resize', function () { 
-		setPortfolio();          
-	});
-})(jQuery);
-</script>
   </body>
 </html>

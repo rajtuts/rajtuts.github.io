@@ -182,7 +182,9 @@ a:focus {
 .mtb {
 	margin-top: 80px;
 	margin-bottom: 80px;
+	
 }
+
 
 .mb {
 	margin-bottom: 60px;
@@ -343,11 +345,11 @@ div.featured-box{
 }
 
 /* Footer */
+
 #footerwrap {
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background: #384452;
-  position: absolute;
+	background: #384452; 
   right: 0;
   bottom: 0;
   left: 0;

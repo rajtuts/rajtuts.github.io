@@ -1,7 +1,8 @@
+Rajtuts.com
 ## Sample code
 This is sample code 
-'''
+```
 {
   "token":"1234"
 }
-'''
+```
